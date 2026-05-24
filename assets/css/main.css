@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     cursor: none;
+    text-decoration: none;
 }
 
 html {
@@ -46,6 +47,10 @@ body {
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
     transition: transform 0.12s ease, width 0.12s ease, height 0.12s ease;
+}
+
+a {
+    color: white;
 }
 
 .cursor.big {
