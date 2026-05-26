@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
     text-decoration: none;
 }
 
@@ -36,40 +35,8 @@ body {
     .license-text { opacity: 1 !important; transform: none !important; }
 }
 
-.cursor {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: #fff;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    mix-blend-mode: difference;
-    transition: transform 0.12s ease, width 0.12s ease, height 0.12s ease;
-}
-
 a {
     color: white;
-}
-
-.cursor.big {
-    width: 48px;
-    height: 48px;
-}
-
-.ripple {
-    position: fixed;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.6);
-    pointer-events: none;
-    z-index: 9997;
-    animation: ripple-out 0.55s cubic-bezier(0.2, 0.8, 0.4, 1) forwards;
-}
-
-@keyframes ripple-out {
-    0%   { width: 0;     height: 0;     opacity: 0.7; transform: translate(-50%, -50%); }
-    100% { width: 130px; height: 130px; opacity: 0;   transform: translate(-50%, -50%); }
 }
 
 .scroll-progress {
@@ -210,6 +177,7 @@ nav a.active { color: #fff; }
 .hero {
     position: relative;
     z-index: 2;
+    align-items: center;
     min-height: calc(100vh - 65px);
     display: flex;
     flex-direction: column;
@@ -231,6 +199,11 @@ nav a.active { color: #fff; }
     line-height: 0.88;
     letter-spacing: -5px;
     margin-bottom: 32px;
+}
+
+.hero h1,
+.hero-desc {
+    text-align: center;
 }
 
 .hero h1 .char {
@@ -331,9 +304,25 @@ nav a.active { color: #fff; }
 .section.in-view .section-title,
 .section.in-view .section-num { opacity: 1; transform: none; }
 
+.section.in-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section.in-view .section-header {
+    justify-content: center;
+    width: 100%;
+}
+
+.section.in-view .links-grid {
+    justify-content: center;
+}
+
 .links-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -517,9 +506,6 @@ footer {
 .footer-links a:hover { color: #fff; }
 
 @media (max-width: 860px) {
-    * { cursor: auto; }
-    .cursor { display: none; }
-
     .navbar {
         padding: 18px 20px;
         flex-wrap: wrap;

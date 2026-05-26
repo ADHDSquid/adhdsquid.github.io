@@ -1,37 +1,3 @@
-const cursor = document.createElement("div");
-cursor.className = "cursor";
-document.body.appendChild(cursor);
-
-let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-
-window.addEventListener("mousemove", (e) => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = `${mx}px`;
-    cursor.style.top  = `${my}px`;
-
-    const wm = document.querySelector(".bg-watermark");
-    if (wm) {
-        const x = (e.clientX / window.innerWidth)  - 0.5;
-        const y = (e.clientY / window.innerHeight) - 0.5;
-        wm.style.setProperty("--wx", `${x * 28}px`);
-        wm.style.setProperty("--wy", `${y * 28}px`);
-        wm.style.setProperty("--wr", `${x * 1.8}deg`);
-        wm.style.setProperty("--ws", `${1 + Math.abs(y) * 0.025}`);
-    }
-});
-
-document.addEventListener("mouseover",  (e) => { if (e.target.closest("a, button, .nav-logo")) cursor.classList.add("big"); });
-document.addEventListener("mouseout",   (e) => { if (e.target.closest("a, button, .nav-logo")) cursor.classList.remove("big"); });
-
-window.addEventListener("click", (e) => {
-    const r = document.createElement("div");
-    r.className = "ripple";
-    r.style.left = `${e.clientX}px`;
-    r.style.top  = `${e.clientY}px`;
-    document.body.appendChild(r);
-    r.addEventListener("animationend", () => r.remove());
-});
-
 const bar = document.createElement("div");
 bar.className = "scroll-progress";
 document.body.appendChild(bar);
