@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
 
@@ -20,8 +21,11 @@
         <a href="/"><i class="fa-solid fa-house"></i> HOME</a>
         <a href="/license"><i class="fa-solid fa-file-lines"></i> LICENSE</a>
         <a href="https://github.com/ADHDSquid" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GITHUB</a>
-        <a href="mailto:adhdsquid@outlook.com"><i class="fa-solid fa-phone"></i> CONTACT</a>
+        <a href="mailto:adhdsquid@outlook.com"><i class="fa-solid fa-envelope"></i> CONTACT</a>
     </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
 </header>
 
 <section class="hero">
@@ -36,26 +40,68 @@
 
 <section class="section">
     <div class="section-header">
-        <span class="section-title"><i class="fa-solid fa-laptop-code"></i> STACK</span>
+        <span class="section-title">STACK</span>
     </div>
-    <div class="links-grid">
-        <a href="https://www.java.com" target="_blank" rel="noopener"><span> <i class="fa-brands fa-java"></i> JAVA →</span></a>
-        <a href="https://www.python.org" target="_blank" rel="noopener"><span><i class="fa-brands fa-python"></i> PYTHON →</span></a>
-        <a href="https://kotlinlang.org" target="_blank" rel="noopener"><span><i class="fa-brands fa-java"></i> KOTLIN →</span></a>
-        <a href="https://www.lua.org" target="_blank" rel="noopener"><span>LUA →</span></a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener"><span>JAVASCRIPT →</span></a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener"><span><i class="fa-brands fa-html5"></i> HTML →</span></a>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener"><span><i class="fa-brands fa-css3-alt"></i> CSS →</span></a>
+    <div class="stack-list">
+        <a href="https://www.java.com" target="_blank" rel="noopener" class="license-banner">
+            <div class="license-banner-inner">
+                <div class="license-banner-title"><i class="fa-brands fa-java"></i> JAVA</div>
+            </div>
+            <span class="license-banner-arrow">↗</span>
+        </a>
+        <a href="https://www.python.org" target="_blank" rel="noopener" class="license-banner">
+            <div class="license-banner-inner">
+                <div class="license-banner-title"><i class="fa-brands fa-python"></i> PYTHON</div>
+            </div>
+            <span class="license-banner-arrow">↗</span>
+        </a>
+        <a href="https://kotlinlang.org" target="_blank" rel="noopener" class="license-banner">
+            <div class="license-banner-inner">
+                <div class="license-banner-title">KOTLIN</div>
+            </div>
+            <span class="license-banner-arrow">↗</span>
+        </a>
+        <a href="https://www.lua.org" target="_blank" rel="noopener" class="license-banner">
+            <div class="license-banner-inner">
+                <div class="license-banner-title">LUA</div>
+            </div>
+            <span class="license-banner-arrow">↗</span>
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener" class="license-banner">
+            <div class="license-banner-inner">
+                <div class="license-banner-title"><i class="fa-brands fa-js"></i> JAVASCRIPT</div>
+            </div>
+            <span class="license-banner-arrow">↗</span>
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener" class="license-banner">
+            <div class="license-banner-inner">
+                <div class="license-banner-title"><i class="fa-brands fa-html5"></i> HTML</div>
+            </div>
+            <span class="license-banner-arrow">↗</span>
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener" class="license-banner">
+            <div class="license-banner-inner">
+                <div class="license-banner-title"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+            </div>
+            <span class="license-banner-arrow">↗</span>
+        </a>
     </div>
 </section>
 
 <section class="section">
     <div class="section-header">
-        <span class="section-title"><i class="fa-solid fa-file-lines"></i>  LICENSE</span>
+        <span class="section-title">LICENSE</span>
     </div>
-    <div class="links-grid">
-        <a href="/license"><span>SQUID PERSONAL USE LICENSE →</span></a>
-    </div>
+    <a href="/license" class="license-banner">
+        <div class="license-banner-inner">
+            <div>
+                <div class="license-banner-label">LEGAL</div>
+                <div class="license-banner-title">SQUID PERSONAL USE LICENSE</div>
+                <div class="license-banner-sub">v1.0 · Source-available · All rights reserved</div>
+            </div>
+            <span class="license-banner-arrow">↗</span>
+        </div>
+    </a>
 </section>
 
 <footer>
